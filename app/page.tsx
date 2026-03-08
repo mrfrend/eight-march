@@ -191,7 +191,7 @@ export default function Home() {
 
                 <div className="text-right mt-12 bg-white/50 p-6 rounded-2xl inline-block float-right border border-pink-50">
                   <p className="text-navy/60 italic text-base">С любовью, уважением и лёгким страхом,</p>
-                  <p className="font-bold text-navy text-xl font-comfortaa mt-1">Ваши 16 однокурсников</p>
+                  <p className="font-bold text-navy text-xl font-comfortaa mt-1">Ваши 17 однокурсников</p>
                 </div>
                 <div className="clear-both"></div>
               </div>
@@ -238,13 +238,8 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 justify-center">
             {PEOPLE.map((person, index) => (
               <Link key={person.slug} href={`/${person.slug}`}>
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.05, type: "spring", bounce: 0.3 }}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="glass p-6 text-center rounded-3xl shadow-lg border border-white/60 hover:shadow-xl hover:border-pink-300 transition-all cursor-pointer h-full flex flex-col items-center justify-center gap-3 bg-white/40 hover:bg-white/60 group"
+                <div
+                  className="glass p-6 text-center rounded-3xl shadow-lg border border-white/60 hover:shadow-xl hover:border-pink-300 transition-all cursor-pointer h-full flex flex-col items-center justify-center gap-3 bg-white/40 hover:bg-white/60 group hover:scale-105 hover:-translate-y-1 active:scale-95"
                 >
                   <div className="w-16 h-16 rounded-full bg-gradient-to-br from-pink-200 to-rose-200 flex items-center justify-center text-2xl shadow-inner group-hover:scale-110 transition-transform">
                     {person.name[0]}
@@ -252,7 +247,7 @@ export default function Home() {
                   <span className="font-bold text-navy font-comfortaa text-lg">
                     {person.name}
                   </span>
-                </motion.div>
+                </div>
               </Link>
             ))}
           </div>

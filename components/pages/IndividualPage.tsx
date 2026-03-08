@@ -141,13 +141,13 @@ export default function IndividualPage({ person }: { person: Person }) {
                         className="text-center mb-12"
                     >
                         <h2 className="text-3xl sm:text-4xl font-black font-comfortaa text-navy mb-4">
-                            16 анонимных голосов
+                            17 анонимных голосов
                         </h2>
                         <p className="text-navy/60">Каждый из нас написал то, что думает. Открой карточки!</p>
                     </motion.div>
 
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                        {(ANONYMOUS_MESSAGES[person.name] || ANONYMOUS_MESSAGES['Вика']).slice(0, 16).map((message, index) => (
+                        {(ANONYMOUS_MESSAGES[person.name] || ANONYMOUS_MESSAGES['Вика']).slice(0, 17).map((message, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -181,7 +181,7 @@ export default function IndividualPage({ person }: { person: Person }) {
                         ))}
                     </div>
 
-                    {openedMessages.length === 16 && (
+                    {openedMessages.length === 17 && (
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
